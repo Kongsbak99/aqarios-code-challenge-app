@@ -50,33 +50,35 @@ async def get_all_use_cases() -> list[UseCaseStatus]:
       <h1>Aqarios Code Challenge</h1>
       <p>Hello and welcome to the aqarios code challenge</p>
       <p>Look at the below code snippet and finish the FastAPI with all relevant CRUD operations in the input field</p>
-      <Editor
-        height="500px"
-        language="python"
-        theme="vs-dark"
-        value={fixedCode}
-        //onChange={value => setCode(value || '')}
-        options={{
-          fontSize: 16,
-          formatOnType: true,
-          autoClosingBrackets: 'languageDefined',
-          minimap: { scale: 10 }
-        }}
-      />
-      <p>Your code here: </p>
-      <Editor
-        height="500px"
-        language="python"
-        theme="vs-dark"
-        value={code}
-        options={{
-          readOnly: true,
-          fontSize: 16,
-          formatOnType: true,
-          autoClosingBrackets: 'languageDefined',
-          minimap: { scale: 10 }
-        }}
-      />
+      <div className={styles.editorWrapper}>
+        <Editor
+          height="500px"
+          language="python"
+          theme="vs-dark"
+          value={fixedCode}
+          //onChange={value => setCode(value || '')}
+          options={{
+            fontSize: 16,
+            formatOnType: true,
+            autoClosingBrackets: 'languageDefined',
+            minimap: { scale: 10 }
+          }}
+        />
+        <p>Your code here: </p>
+        <Editor
+          height="500px"
+          language="python"
+          theme="vs-dark"
+          value={code}
+          options={{
+            readOnly: true,
+            fontSize: 16,
+            formatOnType: true,
+            autoClosingBrackets: 'languageDefined',
+            minimap: { scale: 10 }
+          }}
+        />
+      </div>
       <div className={styles.inputWrapper}>
         <input type='text' defaultValue={'name'}></input>
         <input type='text' defaultValue={'email'}></input>
