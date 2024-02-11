@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Editor from "@monaco-editor/react";
 
+import styles from './page.module.scss';
+
 const HomePage: React.FC = () => {
   const [code, setCode] = useState<string>('');
   //const [fixedCode, setFixedCode] = useState<string>('');
@@ -44,7 +46,7 @@ async def get_all_use_cases() -> list[UseCaseStatus]:
     return [UseCaseStatus.from_orm(use_case) for use_case in use_cases] `
 
   return (
-    <div>
+    <div className={styles.body}>
       <h1>Aqarios Code Challenge</h1>
       <p>Hello and welcome to the aqarios code challenge</p>
       <p>Look at the below code snippet and finish the FastAPI with all relevant CRUD operations in the input field</p>
@@ -75,6 +77,11 @@ async def get_all_use_cases() -> list[UseCaseStatus]:
           minimap: { scale: 10 }
         }}
       />
+      <div className={styles.inputWrapper}>
+        <input type='text' defaultValue={'name'}></input>
+        <input type='text' defaultValue={'email'}></input>
+        <button>Save</button>
+      </div>
     </div>
   );
 };
