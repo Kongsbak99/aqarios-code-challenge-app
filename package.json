@@ -1,0 +1,32 @@
+{
+  "name": "code-challenge-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.6.0",
+    "@srsholmes/react-code-input": "^0.0.5",
+    "@uiw/codemirror-theme-vscode": "^4.21.21",
+    "@uiw/react-codemirror": "^4.21.21",
+    "codemirror": "^5.65.16",
+    "fs": "^0.0.1-security",
+    "next": "14.1.0",
+    "prismjs": "^1.29.0",
+    "react": "^18",
+    "react-code-input": "^3.10.1",
+    "react-codemirror2": "^7.3.0",
+    "react-dom": "^18",
+    "react-monaco-editor": "^0.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}
