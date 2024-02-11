@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.export = {
+module.exports = {
     output: "export",
     // ...
 }
